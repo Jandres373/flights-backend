@@ -1,0 +1,30 @@
+# Ignorar archivos y carpetas generados por el entorno de desarrollo
+node_modules/
+dist/
+.env
+
+# Ignorar archivos de configuración de IDE
+.idea/
+.vscode/
+
+# Ignorar archivos de registro y datos generados
+*.log
+*.sqlite
+
+# Ignorar archivos de compilación y construcción
+*.o
+*.obj
+*.dll
+*.exe
+
+# Ignorar archivos de respaldo y temporales
+*~
+*.bak
+*.tmp
+
+# Ignorar archivos de datos sensibles
+secrets.txt
+
+# Ignorar archivos de dependencias específicas del sistema operativo
+# Ejemplo: macOS
+.DS_Store
