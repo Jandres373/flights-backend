@@ -2,7 +2,6 @@ import Express from 'express'
 import router from './routes';
 import cors from 'cors';
 
-
 const app = Express();
 
 app.use(cors({
@@ -11,7 +10,6 @@ app.use(cors({
   allowedHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'],
   credentials: true,
 }));
-
 
 app.use(Express.json()); 
 
