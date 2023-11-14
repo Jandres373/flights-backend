@@ -8,7 +8,7 @@ import PasswordCode from '../models/passwordCode.model';
 type ControllerCrudFunction = (req: Request, res: Response) => void;
 
 /**
- * @description Obtener todos los registros
+ * @description Otener todos los registros 😱
  */
 export const getAll: ControllerCrudFunction = async (_, res) => {
   try {
@@ -20,7 +20,7 @@ export const getAll: ControllerCrudFunction = async (_, res) => {
 }
 
 /**
- * @description Obtener un registro por ID
+ * @description Obtener un registro por ID 🤫
  */
 export const getOne: ControllerCrudFunction = async (req, res) => {
   const { id } = req.params;
@@ -37,6 +37,9 @@ export const getOne: ControllerCrudFunction = async (req, res) => {
   }
 }
 
+/**
+ * @description Obtener al usuario logeado 😁
+ */
 export const getMe: ControllerCrudFunction = async (req, res) => {
   const loggedUser = req.user
   try {
@@ -46,7 +49,9 @@ export const getMe: ControllerCrudFunction = async (req, res) => {
     res.json({ message: error })
   }
 }
-
+/**
+ * @description Codigo de VERIFICACION ( 🤨 no confundir con reset password ) 
+ */
 export const getCode: ControllerCrudFunction = async (req, res) => {
   const { code } = req.params
 
@@ -92,6 +97,9 @@ export const create: ControllerCrudFunction = async (req, res) => {
   }
 }
 
+/**
+ * @description Codigo que se usa para validar el reseteo del PW del user 💻
+ */
 export const resetPassword: ControllerCrudFunction = async (req, res) => {
   const { email, frontBaseUrl } = req.body;
   const user = await User.findOne({ where: { email } })
@@ -163,6 +171,7 @@ export const remove: ControllerCrudFunction = async (req, res) => {
   }
 }
 
+//~~ */ Funcion que clona User en un objeto para remover la clave. !!No olvidar preguntarle al profe.
 User.prototype.toJSON = function () {
   const values = Object.assign({}, this.get());
   delete values.password; // Excluye la contraseña

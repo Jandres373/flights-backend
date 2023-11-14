@@ -1,6 +1,5 @@
 // Import necessary modules and configurations
 import { DataTypes, Model } from 'sequelize';
-import { Column } from 'sequelize-typescript';
 import sequelize from '../database/database';
 
 // Define the model
@@ -14,11 +13,9 @@ EmailCode.init(
   {
     code: {
       type: DataTypes.STRING,
-      allowNull: false
     },
     userId: {
       type: DataTypes.INTEGER,
-      allowNull: false
     }
   },
   {
