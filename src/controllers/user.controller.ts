@@ -149,7 +149,7 @@ export const update: ControllerCrudFunction = async (req, res) => {
       return res.status(404).json({ error: 'Registro no encontrado' });
     }
   } catch (error) {
-    return res.status(500).json({ error: 'Error al actualizar el registro' });
+    return res.status(500).json({ error: `Error al actualizar el registro: ${error}` });
   }
 }
 

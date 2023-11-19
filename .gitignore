@@ -1,8 +1,9 @@
 # Ignorar archivos y carpetas generados por el entorno de desarrollo
 node_modules/
 dist/
+seeds/
 .env
-
+env.example
 # Ignorar archivos de configuración de IDE
 .idea/
 .vscode/

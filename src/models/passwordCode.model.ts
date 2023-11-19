@@ -20,7 +20,7 @@ PasswordCode.init(
   },
   {
     sequelize,
-    modelName: 'emailcode', // Nombre de la tabla en la base de datos
+    modelName: 'passwordcode', // Nombre de la tabla en la base de datos
   }
 );
 
