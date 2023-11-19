@@ -2,7 +2,7 @@ import app from "./app";
 import sequelize from "./database/database";
 import './models/index'
 
-const PORT = process.env.SERVER_PORT || 8080
+const PORT = 8080
 
 try {
   sequelize.sync()
